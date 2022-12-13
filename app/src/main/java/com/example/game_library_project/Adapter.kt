@@ -32,13 +32,13 @@ class Adapter(val gameList : ArrayList<GamesInfo>) : RecyclerView.Adapter<Adapte
 
         holder.itemView.setOnClickListener{
             //tıklandıgı zaman renk degistirme
+
             holder.binding.cardview.setBackgroundColor(0x1F8E8E93)
 
             val intent = Intent(holder.itemView.context,DetailActivity::class.java)
             intent.putExtra("gameInfo",gameList.get(position))
             holder.itemView.context.startActivity(intent)
             //finish yapmamız gerekiyo mu?
-
 
         }
 
